@@ -60,7 +60,18 @@ export default function IndexPage() {
       placeholder: 'Enter your Udyam Registration Number',
       required: false,
     },
-    { "name": "otp", "label": "OTP", "step": 2, "type": "text", "placeholder": "Enter the OTP received", "required": true, "validation": { "pattern": "^\\d{6}$", "message": "OTP must be 6 digits long." } },
+    { 
+      "name": "otp", 
+      "label": "OTP", 
+      "step": 2, 
+      "type": "text", 
+      "placeholder": "Enter the OTP received", 
+      "required": true, 
+      "validation": { 
+        "pattern": "^\\d{6}$", 
+        "message": "OTP must be 6 digits long." 
+      } 
+    },
     {
       name: 'pan',
       label: 'PAN Number',
@@ -83,6 +94,16 @@ export default function IndexPage() {
   const step1Fields = useMemo(() => schema.filter(f => f.step === 1), [schema]);
   const step2Fields = useMemo(() => schema.filter(f => f.step === 2), [schema]);
   const step3Fields = useMemo(() => schema.filter(f => f.step === 3), [schema]);
+
+  // Create a separate field schema for the Udyam number input
+  const udyamFieldSchema: FieldSchema = {
+    name: 'udyamNumber',
+    label: 'Udyam Registration Number',
+    step: 1,
+    type: 'text',
+    placeholder: 'Enter your Udyam Registration Number',
+    required: false,
+  };
 
   const setValue = (name: string, value: any) => {
     setValues(v => ({ ...v, [name]: value }));
@@ -269,8 +290,6 @@ export default function IndexPage() {
 
   if (loading) return <div className="p-4">Loading...</div>;
 
-  if (loading) return <div className="p-4">Loading...</div>;
-
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full bg-white p-8 rounded-lg shadow-md">
@@ -311,7 +330,7 @@ export default function IndexPage() {
                 <h4 className="font-medium text-gray-700 mb-2">Option 2: For those already having Udyam Registration Number</h4>
                 <p className="text-sm text-gray-600">Login with your Udyam Registration Number</p>
                 <FormField
-                  field={{ name: 'udyamNumber', label: 'Udyam Registration Number', type: 'text', placeholder: 'Enter your Udyam Registration Number' }}
+                  field={udyamFieldSchema}
                   value={values['udyamNumber']}
                   onChange={setValue}
                   error={errors['udyamNumber']}
