@@ -1,0 +1,17 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+/// Dedicated columns for frequently used keys + full JSON payload for flexibility.
+model Submission {
+  id        Int      @id @default(autoincrement())
+  aadhaar   String?  @db.VarChar(20)
+  pan       String?  @db.VarChar(20)
+  payload   Json
+  createdAt DateTime @default(now())
+}

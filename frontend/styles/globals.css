@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #__next { height: 100%; }
+body { @apply bg-gray-50 text-gray-900; }
+input, select, textarea { @apply border rounded-md px-3 py-2 w-full; }
+.error-text { @apply text-sm text-red-600 mt-1; }

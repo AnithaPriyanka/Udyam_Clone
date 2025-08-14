@@ -1,0 +1,103 @@
+[
+  {
+    "name": "ctl00$ContentPlaceHolder1$txtadharno",
+    "id": "ctl00_ContentPlaceHolder1_txtadharno",
+    "label": "1. Aadhaar Number/ आधार संख्या",
+    "step": 1,
+    "type": "text",
+    "placeholder": "Your Aadhaar No",
+    "required": false,
+    "validation": {
+      "pattern": "^\\d{12}$",
+      "message": "Aadhaar must be exactly 12 digits",
+      "minLength": null,
+      "maxLength": 12
+    },
+    "options": null,
+    "visible": true,
+    "rawAttributes": {
+      "name": "ctl00$ContentPlaceHolder1$txtadharno",
+      "type": "text",
+      "maxlength": "12",
+      "id": "ctl00_ContentPlaceHolder1_txtadharno",
+      "tabindex": "1",
+      "class": [
+        "form-control"
+      ],
+      "autocomplete": "Off",
+      "placeholder": "Your Aadhaar No"
+    }
+  },
+  {
+    "name": "ctl00$ContentPlaceHolder1$txtownername",
+    "id": "ctl00_ContentPlaceHolder1_txtownername",
+    "label": "2. Name of Entrepreneur / उद्यमी का नाम",
+    "step": 1,
+    "type": "text",
+    "placeholder": "Name as per Aadhaar",
+    "required": false,
+    "validation": {
+      "pattern": "",
+      "message": "Invalid value",
+      "minLength": null,
+      "maxLength": 100
+    },
+    "options": null,
+    "visible": true,
+    "rawAttributes": {
+      "name": "ctl00$ContentPlaceHolder1$txtownername",
+      "type": "text",
+      "maxlength": "100",
+      "id": "ctl00_ContentPlaceHolder1_txtownername",
+      "tabindex": "2",
+      "class": [
+        "form-control"
+      ],
+      "autocomplete": "Off",
+      "placeholder": "Name as per Aadhaar"
+    }
+  },
+  {
+    "name": "ctl00$ContentPlaceHolder1$chkDecarationA",
+    "id": "ctl00_ContentPlaceHolder1_chkDecarationA",
+    "label": "2. Name of Entrepreneur / उद्यमी का नाम",
+    "step": 1,
+    "type": "checkbox",
+    "placeholder": "",
+    "required": false,
+    "validation": null,
+    "options": null,
+    "visible": true,
+    "rawAttributes": {
+      "id": "ctl00_ContentPlaceHolder1_chkDecarationA",
+      "type": "checkbox",
+      "name": "ctl00$ContentPlaceHolder1$chkDecarationA",
+      "checked": "checked",
+      "tabindex": "3"
+    }
+  },
+  {
+    "name": "ctl00$ContentPlaceHolder1$btnValidateAadhaar",
+    "id": "ctl00_ContentPlaceHolder1_btnValidateAadhaar",
+    "label": "2. Name of Entrepreneur / उद्यमी का नाम",
+    "step": 1,
+    "type": "submit",
+    "placeholder": "",
+    "required": false,
+    "validation": null,
+    "options": null,
+    "visible": true,
+    "rawAttributes": {
+      "type": "submit",
+      "name": "ctl00$ContentPlaceHolder1$btnValidateAadhaar",
+      "value": "Validate & Generate OTP",
+      "onclick": "javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(\"ctl00$ContentPlaceHolder1$btnValidateAadhaar\", \"\", true, \"X\", \"\", false, false))",
+      "id": "ctl00_ContentPlaceHolder1_btnValidateAadhaar",
+      "tabindex": "4",
+      "class": [
+        "btn",
+        "btn-primary"
+      ]
+    }
+  }
+]
