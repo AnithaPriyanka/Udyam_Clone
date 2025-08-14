@@ -2,8 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import axios from 'axios';
 import FormField, { FieldSchema } from '../components/FormField';
 
-const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || process.env.BACKEND_URL || 'http://localhost:5000';
-
+const BACKEND_URL = 'https://udyam-clone-2.onrender.com';
 type Errors = Record<string, string | undefined>;
 type Values = Record<string, any>;
 
