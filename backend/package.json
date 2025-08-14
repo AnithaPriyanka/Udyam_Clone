@@ -5,12 +5,12 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon server.js",
-    "start": "node server.js",
-    "prisma:generate": "prisma generate",
-    "prisma:migrate": "prisma migrate deploy",
-    "test": "jest --runInBand"
-  },
+  "dev": "nodemon server.js",
+  "start": "npx prisma migrate deploy && node server.js",
+  "prisma:generate": "prisma generate",
+  "prisma:migrate": "prisma migrate deploy",
+  "test": "jest --runInBand"
+},
   "engines": { "node": ">=16" },
   "dependencies": {
     "express": "^4.19.2",
