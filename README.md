@@ -1,4 +1,4 @@
-# Udyam Steps 1–2 Replica (No Docker)
+# Udyam Steps 1–2 Replica
 
 This project scrapes the first two steps of the Udyam Registration portal, renders a dynamic React/Next.js form from the scraped schema,
 validates inputs on both client and server (Aadhaar, PAN), and stores submissions in PostgreSQL via Prisma.
